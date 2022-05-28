@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Panele solarne</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type='text/javascript' src="jquery.js"></script> 
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div class="content">
+
+            <div id="header">
+
+                <h1><a href="#"><span></span>Solar-Pol</a></h1>
+
+                <div id="menu">
+
+                    <ul>
+                        <li class="selected"><a href="home.html">Oferta</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="onas.html">O nas</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+
+                <a><img src="images/image1.jpg" alt="" border="0" width="400" /></a>
+
+            </div>
+
+            <div id="container">
+
+                <div id="left">
+                    <h4>Panele fotowoltaiczne</h4>
+                    <h3>
+                        Oferujemy energooszczędne panele fotowoltaiczne najwyższej jakości w konkurencyjnych cenach na rynku.
+                        Posiadamy w ofercie ogniwa słoneczne najlepszych producentów
+                    </h3>
+
+                    <br />
+                    <h3>
+                        W ciągu roku w Polsce produkowane jest 400 mln ton CO2. To ponad milion ton dziennie.
+                        Uśredniając, w czasie od otwarcia przez Ciebie tej strony w Polsce wyprodukowano:
+                    </h3>
+                    <h3 id="x">0</h3>
+                    <h3>ton CO2.</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="content">
+
+            <div class="sidebar">
+
+
+            </div>
+            <a><span class="leftp">2022 Paweł Brodziak</span></a>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $("div#topline a").click(function () {
+                $("#top").slideToggle("slow");
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
+
+    <script type='text/javascript'>
+        setInterval(licznik, 1000);
+        var liczba = 0;
+        function licznik() {
+            liczba = liczba + 12;
+            document.getElementById("x").innerHTML = liczba;
+        }
+
+    </script>
+</body>
+</html>

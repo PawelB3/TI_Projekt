@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Panele solarne</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type='text/javascript' src="jquery.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div class="content">
+
+            <div id="header">
+
+                <h1><a href="#"><span></span>Solar-Pol</a></h1>
+
+                <div id="menu">
+
+                    <ul>
+                        <li><a href="home.html">Oferta</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="onas.html">O nas</a></li>
+                        <li class="selected"><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div id="container">
+
+                <p>
+                    <h3>Formularz kontaktowy + zamówienia</h3>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="content">
+
+            <a><span class="leftp">2022 Paweł Brodziak</span></a>
+
+        </div>
+
+    </div>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $("div#topline a").click(function () {
+                $("#top").slideToggle("slow");
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
+</body>
+</html>
