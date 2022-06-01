@@ -109,6 +109,7 @@ h1 a span{
 	align-items: center;
 }
 
+
 .gallery img{
 	padding: 0px 20px 10px 20px;
 	width: 700px;
@@ -122,6 +123,11 @@ h1 a span{
 	padding: 3px;
 }
 
+.arrow :hover {
+	border: solid yellow;
+	color: yellow;
+}
+
 .right {
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
@@ -131,6 +137,20 @@ h1 a span{
 	transform: rotate(135deg);
 	-webkit-transform: rotate(135deg);
 }
+
+@media only screen and (max-width: 900px) {
+	.gallery {
+		width: 600px;
+	}
+	.gallery img{
+		padding: 0px 10px 5px 10px;
+		width: 400px;
+	}
+	.arrow {
+		border-width: 0 3px 3px 0;
+		padding: 2px;
+	}
+  }
 
 
 .sidebar {

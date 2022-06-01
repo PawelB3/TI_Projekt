@@ -36,6 +36,17 @@
                 <p>
                     <h3>Formularz kontaktowy + zamówienia</h3>
                 </p>
+                <form action="script.php" method="get">
+                    <label for="imie"><h3>Imię</h3></label>
+                    <input type="text" name="imie"><br><br>
+                    <label for="nazwisko"><h3>Nazwisko</h3></label>
+                    <input type="text" name="nazwisko"><br><br>
+                    <label for="opis"><h3>Opis</h3>></label><br>
+                    <textarea name="opis" rows="8" cols="28">
+                    </textarea><br><br>
+                    <button type="button" onclick="alert('Zgłoszenie zostało wysłane')">Wyślij</button>
+                    <button type="button">Zresetuj</button>
+                  </form>
 
             </div>
 

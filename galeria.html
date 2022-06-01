@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Panele solarne</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type='text/javascript' src="jquery.js"></script>
 
 </head>
 
@@ -32,9 +31,9 @@
             </div>
 
             <div class="gallery">
-                <a href="#" class="arrow left" onclick="left()"></a>
+                <a class="arrow left" onclick="left()"></a>
                 <a id="aimg1" target="_blank" href="images/image4.jpeg"><img id="img1" src="images/image4.jpeg" alt="" border="0" /></a>
-                <a href="#" class="arrow right" onclick="right()"></a>
+                <a class="arrow right" onclick="right()"></a>
             </div>
 
         </div>
@@ -49,19 +48,33 @@
     </div>
 
     <script type='text/javascript'>
-        $(document).ready(function () {
-            $("div#topline a").click(function () {
-                $("#top").slideToggle("slow");
-                $(this).toggleClass("active");
-            });
-        });
+        let lista_imgs = ["images/image4.jpeg", "images/image2.jpeg", "images/image5.jpg"];
+        let i = 0;
 
         function left() {
-            document.getElementById("img1").src = "images/image2.jpeg"
+            console.log(lista_imgs.length);
+            if (i + 1 <= lista_imgs.length && i != 0) {
+                i = i - 1;
+            }
+            else if (i == 0) {
+                i = lista_imgs.length - 1
+            }
+            else {
+                i = 0;
+            }
+            console.log(i);
+            document.getElementById("img1").src = lista_imgs[i];
         }
 
         function right() {
-            document.getElementById("img1").src = "images/image4.jpeg"
+            if (Math.abs(i) + 1 < lista_imgs.length) {
+                i = i + 1;
+            }
+            else {
+                i = 0;
+            }
+            console.log(i);
+            document.getElementById("img1").src = lista_imgs[i];
         }
     </script>
 </body>
